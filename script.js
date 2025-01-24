@@ -161,3 +161,17 @@ document.getElementById("restart").addEventListener("click", restartQuiz);
 
 // Start the quiz when the page loads
 initializeQuiz();
+
+// Add at the beginning of your script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const frontPage = document.getElementById("front-page");
+  const quizContent = document.getElementById("quiz-content");
+  const startButton = document.getElementById("start-quiz");
+
+  startButton.addEventListener("click", function () {
+    frontPage.style.display = "none";
+    quizContent.style.display = "block";
+    // If you have a function to initialize the quiz, call it here
+    // initializeQuiz();
+  });
+});

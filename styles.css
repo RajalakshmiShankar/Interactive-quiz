@@ -26,9 +26,11 @@ body {
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
   backdrop-filter: blur(10px);
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -158,5 +160,81 @@ button:disabled {
 
   button {
     padding: 10px 20px;
+  }
+}
+
+#front-page {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  animation: fadeIn 0.8s ease-out;
+}
+
+#front-page h1 {
+  font-size: 3em;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#front-page p {
+  font-size: 1.4em;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-btn {
+  padding: 18px 50px;
+  font-size: 1.3em;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: auto;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+}
+
+.start-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  #front-page h1 {
+    font-size: 2.2em;
+  }
+
+  #front-page p {
+    font-size: 1.2em;
+    padding: 0 15px;
+  }
+
+  .start-btn {
+    padding: 15px 40px;
+    font-size: 1.1em;
   }
 }
